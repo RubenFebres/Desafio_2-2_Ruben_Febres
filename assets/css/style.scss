@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar grilla grilla"
+    "footer footer footer";
+
+  .header {
+    background-color: aqua;
+    grid-area: header;
+  }
+
+  .sidebar {
+    background-color: green;
+    grid-area: sidebar;
+  }
+
+  .grilla {
+    background-color: purple;
+    grid-area: grilla;
+  }
+
+  .footer {
+    background-color: red;
+    grid-area: footer;
+  }
+}
