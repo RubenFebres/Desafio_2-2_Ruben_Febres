@@ -5,11 +5,15 @@
 }
 
 .grid_container {
+  min-height: 100vh;
   display: grid;
   grid-template-areas:
     "header header header"
     "sidebar grilla grilla"
     "footer footer footer";
+
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: 100px 1fr 80px;
 
   .header {
     background-color: aqua;
