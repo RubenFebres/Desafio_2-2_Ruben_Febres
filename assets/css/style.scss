@@ -23,6 +23,26 @@
   .sidebar {
     background-color: green;
     grid-area: sidebar;
+
+    .sidebar_menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      gap: 10px;
+      padding: 15px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 5px;
+
+        .contador {
+          opacity: 0.5;
+        }
+      }
+    }
   }
 
   .grilla {
