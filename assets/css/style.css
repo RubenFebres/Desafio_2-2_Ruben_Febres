@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -16,7 +17,7 @@
   display: grid;
   grid-template-areas: "header header header" "sidebar grilla grilla" "footer footer footer";
   grid-template-columns: 180px 1fr;
-  grid-template-rows: 60px 1fr 60px;
+  grid-template-rows: 60px 1fr 350px;
 }
 .grid_container .header {
   padding: 10px;
@@ -69,7 +70,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 10px;
+  gap: 20px;
   padding: 15px;
 }
 .grid_container .sidebar .sidebar_menu ul {
@@ -83,24 +84,89 @@
 }
 .grid_container .grilla {
   grid-area: grilla;
-  background-color: purple;
+  background-color: rgb(219, 219, 219);
   padding: 10px;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   height: calc(100vh - 120px);
   overflow-y: auto;
+  scrollbar-width: none;
 }
 .grid_container .grilla div {
   display: flex;
   flex-direction: column;
-  background-color: burlywood;
+  background-color: #ffffff;
   border-radius: 10px;
-  text-align: center;
+  text-align: start;
   padding: 10px;
   min-height: 300px;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: small;
+  gap: 3px;
+}
+.grid_container .grilla div button {
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 3px;
+}
+.grid_container .grilla div button:hover {
+  color: black;
+  background-color: #9c9c9c;
+}
+.grid_container .grilla div .diseño {
+  opacity: 0.5;
+}
+.grid_container .grilla div .price {
+  font-weight: bold;
 }
 .grid_container .footer {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
   grid-area: footer;
+}
+.grid_container .footer .promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  text-align: center;
+  background-color: yellow;
+  font-size: larger;
+}
+.grid_container .footer .footer_clases {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+}
+.grid_container .footer .footer_info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+  margin-top: 20px;
+}
+.grid_container .footer .footer_info p {
+  text-align: left;
+}
+.grid_container .footer .footer_info .class {
+  list-style: none;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: small;
+}
+.grid_container .footer .footer_info .class p {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
 }/*# sourceMappingURL=style.css.map */
